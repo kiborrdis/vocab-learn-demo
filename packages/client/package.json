@@ -1,0 +1,42 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "codegen": "tsx ./codegen/apiClientGenerate.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "format": "prettier --write ./src",
+    "format:check": "prettier --check ./src",
+    "validate": "yarn format:check && yarn typecheck && yarn lint",
+    "genicon:macos": "magick -background \"#3a3a3a\"  public/icon.svg -resize 128x128 public/icon-128x128.png && magick -background \"#3a3a3a\"  public/icon.svg -resize 120x120 public/icon-120x120.png && magick -background \"#3a3a3a\"  public/icon.svg -resize 152x152 public/icon-152x152.png && magick -background \"#3a3a3a\"  public/icon.svg -resize 167x167 public/icon-167x167.png && magick -background \"#3a3a3a\"  public/icon.svg -resize 180x180 public/icon-180x180.png && magick -background \"#3a3a3a\"  public/icon.svg -resize 16x16 public/icon-16x16.png && magick -background \"#3a3a3a\"  public/icon.svg -resize 48x48 public/icon-48x48.png"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.80.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "openapi-types": "^12.1.3",
+    "openapi-typescript": "^7.8.0",
+    "prettier": "^3.5.3",
+    "server": "workspace:^",
+    "tsx": "^4.21.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.4"
+  }
+}

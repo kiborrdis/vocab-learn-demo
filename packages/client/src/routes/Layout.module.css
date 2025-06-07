@@ -1,0 +1,78 @@
+/* Updated to use a consistent dark theme */
+.layoutContainer {
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the start */
+  padding: 0.5rem 1rem;
+  background-color: var(--appbar-color); /* Use app bar color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  height: 55px; /* Fixed height for the appbar */
+  box-sizing: border-box;
+}
+
+.navbarContent {
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem; /* Add spacing between back button and app name */
+}
+
+.backContainer {
+  width: 60px;
+}
+
+.appName {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.backButton:hover {
+  text-decoration: underline;
+  color: var(--text-color);
+}
+
+.authStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.authIndicator {
+  color: #4ade80;
+  font-size: 0.7rem;
+}
+
+.authText {
+  font-size: 0.75rem;
+  font-weight: 500;
+}

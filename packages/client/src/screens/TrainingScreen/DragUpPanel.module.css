@@ -1,0 +1,5 @@
+/* DragUpPanel CSS Module */
+.dragArea {
+  /* Styling for the invisible drag area */
+  background: transparent;
+}

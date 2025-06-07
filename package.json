@@ -1,0 +1,24 @@
+{
+  "name": "language-learn",
+  "private": true,
+  "scripts": {
+    "validate": "yarn workspaces foreach --all --topological-dev run validate",
+    "start:prod": "node ./packages/server/dist/index.js",
+    "format": "yarn workspaces foreach --all --topological-dev run format",
+    "codegen": "yarn workspaces foreach --all --topological-dev run codegen",
+    "build": "yarn workspaces foreach --all --topological-dev run build",
+    "build:client": "yarn codegen && yarn workspace client build",
+    "prepare": "yarn codegen && yarn build"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "yarn@4.3.1",
+  "dependencies": {
+    "cookie-parser": "^1.4.7"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.9",
+    "tsx": "^4.19.4"
+  }
+}

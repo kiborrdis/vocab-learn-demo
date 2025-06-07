@@ -1,0 +1,79 @@
+.root {
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.root:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.regular.size-l {
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+}
+
+.regular.size-m {
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.text {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.text:hover {
+  text-decoration: underline;
+  color: var(--accent-color-hover);
+}
+
+.accent.text {
+  color: var(--accent-color);
+}
+
+.accent.text:hover {
+  color: var(--accent-color-active);
+}
+
+.default.text {
+  color: var(--default-action-text-color);
+}
+
+.default.text:hover {
+  color: var(--default-action-text-color);
+}
+
+.regular.accent {
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
+}
+
+.regular.accent:hover {
+  background-color: var(--accent-color-hover);
+}
+
+.regular.accent:active {
+  background-color: var(--accent-color-active);
+}
+
+.regular.default {
+  background-color: var(--default-action-color);
+  color: var(--default-action-text-color);
+}
+
+.regular.default:hover {
+  background-color: var(--default-action-color-hover);
+}
+
+.regular.default:active {
+  background-color: var(--default-action-color-active);
+}

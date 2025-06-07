@@ -1,0 +1,98 @@
+// See https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference for full schema options
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         Int      @id @default(autoincrement())
+  telegramId Int      @unique
+  userWords  UserWord[]
+  telegramAuthTokens TelegramAuthToken[]
+  sessions   Session[]
+  lastWordExportAt DateTime?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Word {
+  id         Int      @id @default(autoincrement())
+  lemma      String
+  language   String  // ISO code, e.g. 'en'
+  definitions Definition[]
+  userWords  UserWord[]
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([lemma, language])
+}
+
+model UserWord {
+  id      Int   @id @default(autoincrement())
+  user    User  @relation(fields: [userId], references: [id])
+  userId  Int
+  word    Word  @relation(fields: [wordId], references: [id])
+  wordId  Int
+  // Add user-specific stats/fields here (e.g., memorization progress)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  status   UserWordStatus?
+
+  @@unique([userId, wordId])
+}
+
+model UserWordStatus {
+  id             Int      @id @default(autoincrement())
+  userWord       UserWord @relation(fields: [userWordId], references: [id])
+  userWordId     Int      @unique
+  lastReviewed   DateTime?
+  score          Int      @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+enum DictionaryId {
+  DICTIONARYAPI_DEV
+  GEMINI
+  GEMINI_RUSSIAN
+}
+
+model Dictionary {
+  id   DictionaryId @id
+  name String @unique
+  definitions Definition[]
+}
+
+model Definition {
+  id           Int      @id @default(autoincrement())
+  word         Word     @relation(fields: [wordId], references: [id])
+  wordId       Int
+  dictionary   Dictionary @relation(fields: [dictionaryId], references: [id])
+  dictionaryId DictionaryId
+  data         Json     // Store all definition data as JSON
+  dataFormat   Int      // Version of the data format
+  createdAt    DateTime @default(now())
+}
+
+model TelegramAuthToken {
+  id         Int      @id @default(autoincrement())
+  token      String   @unique
+  user       User     @relation(fields: [userId], references: [id])
+  userId     Int
+  createdAt  DateTime @default(now())
+  expiresAt  DateTime
+}
+
+model Session {
+  id         Int      @id @default(autoincrement())
+  sessionId  String   @unique
+  user       User     @relation(fields: [userId], references: [id])
+  userId     Int
+  createdAt  DateTime @default(now())
+  expiresAt  DateTime
+}

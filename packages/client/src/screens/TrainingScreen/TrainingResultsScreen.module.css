@@ -1,0 +1,64 @@
+/* Styling for the TrainingResultsScreen component */
+
+.resultsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--background-color, #f9f9f9);
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--primary-color, #333);
+}
+
+.statisticsContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.statisticItem {
+  text-align: center;
+}
+
+.statisticNumber {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent-color, #4caf50);
+}
+
+.statisticLabel {
+  font-size: 1rem;
+  color: var(--text-color, #666);
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.actionButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--button-color, #007bff);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.actionButton:hover {
+  background-color: var(--button-hover-color, #0056b3);
+}

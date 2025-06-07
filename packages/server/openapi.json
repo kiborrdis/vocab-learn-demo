@@ -1,0 +1,1993 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Generated API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/auth/telegram/:token": {
+      "post": {
+        "summary": "post_auth_telegram_token",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [],
+                "properties": {}
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Response with status 200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "success"
+                  ],
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Response with status 400",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Response with status 500",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/info/:id": {
+      "get": {
+        "summary": "get_info_id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [],
+                "properties": {}
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Response with status 200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "userId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "userId": {
+                      "type": "number"
+                    },
+                    "serverTime": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Response with status 400",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Response with status 401",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Response with status 500",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/vocabulary/count": {
+      "get": {
+        "summary": "get_vocabulary_count",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [],
+                "properties": {}
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Response with status 200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "count"
+                  ],
+                  "properties": {
+                    "count": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Response with status 400",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Response with status 401",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Response with status 500",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/training-set": {
+      "get": {
+        "summary": "get_training_set",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [],
+                "properties": {}
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Response with status 200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "trainingSet"
+                  ],
+                  "properties": {
+                    "trainingSet": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/TrainingItem"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Response with status 400",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Response with status 401",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Response with status 500",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/training-set/mark": {
+      "post": {
+        "summary": "post_training_set_mark",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainingSetMarkBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Response with status 200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "success",
+                    "status"
+                  ],
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "status": {
+                      "type": "object",
+                      "required": [
+                        "score"
+                      ],
+                      "properties": {
+                        "score": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Response with status 400",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Response with status 401",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Response with status 404",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Response with status 500",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/identity": {
+      "get": {
+        "summary": "get_identity",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [],
+                "properties": {}
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Response with status 200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Response with status 400",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Response with status 401",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Response with status 500",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/definitions/update": {
+      "post": {
+        "summary": "post_definitions_update",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDefinitionsBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Response with status 200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "definitions"
+                  ],
+                  "properties": {
+                    "definitions": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "name",
+                          "data"
+                        ],
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "data": {
+                            "type": "object",
+                            "required": [
+                              "word",
+                              "meanings"
+                            ],
+                            "properties": {
+                              "word": {
+                                "type": "string"
+                              },
+                              "meanings": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "required": [
+                                    "partOfSpeech",
+                                    "definitions"
+                                  ],
+                                  "properties": {
+                                    "partOfSpeech": {
+                                      "type": "string"
+                                    },
+                                    "definitions": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "object",
+                                        "required": [
+                                          "definition"
+                                        ],
+                                        "properties": {
+                                          "definition": {
+                                            "type": "string"
+                                          },
+                                          "example": {
+                                            "type": "string"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Response with status 400",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Response with status 401",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Response with status 404",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Response with status 500",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/words/add": {
+      "post": {
+        "summary": "post_words_add",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "word"
+                ],
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  },
+                  "language": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Response with status 200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "success",
+                    "wordId"
+                  ],
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "wordId": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Response with status 400",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Response with status 401",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Response with status 500",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AuthTelegramPath": {
+        "type": "object",
+        "required": [
+          "token"
+        ],
+        "properties": {
+          "token": {
+            "type": "string"
+          }
+        }
+      },
+      "StatusResponse<0, 1>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              400
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<2, 3>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              200
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "success"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<4, 5>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "oneOf": [
+              {
+                "enum": [
+                  400
+                ],
+                "type": "number"
+              },
+              {
+                "enum": [
+                  500
+                ],
+                "type": "number"
+              }
+            ]
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "details": {
+                "type": "object",
+                "required": [],
+                "properties": {}
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<6, 7>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              200
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "id",
+              "userId",
+              "serverTime"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "userId": {
+                "type": "number"
+              },
+              "serverTime": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<8, 9>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "oneOf": [
+              {
+                "enum": [
+                  400
+                ],
+                "type": "number"
+              },
+              {
+                "enum": [
+                  500
+                ],
+                "type": "number"
+              }
+            ]
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "details": {
+                "type": "object",
+                "required": [],
+                "properties": {}
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<10, 11>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              401
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<12, 13>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              200
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "count"
+            ],
+            "properties": {
+              "count": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<14, 15>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "oneOf": [
+              {
+                "enum": [
+                  400
+                ],
+                "type": "number"
+              },
+              {
+                "enum": [
+                  500
+                ],
+                "type": "number"
+              }
+            ]
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "details": {
+                "type": "object",
+                "required": [],
+                "properties": {}
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<16, 17>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              401
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<18, 19>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              200
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "trainingSet"
+            ],
+            "properties": {
+              "trainingSet": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/TrainingItem"
+                }
+              }
+            }
+          }
+        }
+      },
+      "TrainingItem": {
+        "type": "object",
+        "required": [
+          "userWordId",
+          "lemma",
+          "language",
+          "learnedScore",
+          "definitions"
+        ],
+        "properties": {
+          "userWordId": {
+            "type": "number"
+          },
+          "lemma": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "learnedScore": {
+            "type": "number"
+          },
+          "definitions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DictDefinition"
+            }
+          }
+        }
+      },
+      "DictDefinition": {
+        "type": "object",
+        "required": [
+          "name",
+          "data"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object",
+            "required": [
+              "word",
+              "meanings"
+            ],
+            "properties": {
+              "word": {
+                "type": "string"
+              },
+              "meanings": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "partOfSpeech",
+                    "definitions"
+                  ],
+                  "properties": {
+                    "partOfSpeech": {
+                      "type": "string"
+                    },
+                    "definitions": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "definition"
+                        ],
+                        "properties": {
+                          "definition": {
+                            "type": "string"
+                          },
+                          "example": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<20, 21>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "oneOf": [
+              {
+                "enum": [
+                  400
+                ],
+                "type": "number"
+              },
+              {
+                "enum": [
+                  500
+                ],
+                "type": "number"
+              }
+            ]
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "details": {
+                "type": "object",
+                "required": [],
+                "properties": {}
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<22, 23>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              401
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "TrainingSetMarkBody": {
+        "type": "object",
+        "required": [
+          "userWordId",
+          "remembered"
+        ],
+        "properties": {
+          "userWordId": {
+            "type": "number"
+          },
+          "remembered": {
+            "type": "boolean"
+          }
+        }
+      },
+      "StatusResponse<24, 25>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              200
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "success",
+              "status"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean"
+              },
+              "status": {
+                "type": "object",
+                "required": [
+                  "score"
+                ],
+                "properties": {
+                  "score": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<26, 27>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              404
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<28, 29>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "oneOf": [
+              {
+                "enum": [
+                  400
+                ],
+                "type": "number"
+              },
+              {
+                "enum": [
+                  500
+                ],
+                "type": "number"
+              }
+            ]
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "details": {
+                "type": "object",
+                "required": [],
+                "properties": {}
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<30, 31>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              401
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<32, 33>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              200
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<34, 35>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "oneOf": [
+              {
+                "enum": [
+                  400
+                ],
+                "type": "number"
+              },
+              {
+                "enum": [
+                  500
+                ],
+                "type": "number"
+              }
+            ]
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "details": {
+                "type": "object",
+                "required": [],
+                "properties": {}
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<36, 37>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              401
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "UpdateDefinitionsBody": {
+        "type": "object",
+        "required": [
+          "userWordId"
+        ],
+        "properties": {
+          "userWordId": {
+            "type": "number"
+          }
+        }
+      },
+      "StatusResponse<38, 39>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              404
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<40, 41>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              200
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "definitions"
+            ],
+            "properties": {
+              "definitions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "name",
+                    "data"
+                  ],
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "required": [
+                        "word",
+                        "meanings"
+                      ],
+                      "properties": {
+                        "word": {
+                          "type": "string"
+                        },
+                        "meanings": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "partOfSpeech",
+                              "definitions"
+                            ],
+                            "properties": {
+                              "partOfSpeech": {
+                                "type": "string"
+                              },
+                              "definitions": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "required": [
+                                    "definition"
+                                  ],
+                                  "properties": {
+                                    "definition": {
+                                      "type": "string"
+                                    },
+                                    "example": {
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<42, 43>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "oneOf": [
+              {
+                "enum": [
+                  400
+                ],
+                "type": "number"
+              },
+              {
+                "enum": [
+                  500
+                ],
+                "type": "number"
+              }
+            ]
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "details": {
+                "type": "object",
+                "required": [],
+                "properties": {}
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<44, 45>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              401
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<46, 47>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              400
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<48, 49>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              200
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "success",
+              "wordId"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean"
+              },
+              "wordId": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<50, 51>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              500
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<52, 53>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "oneOf": [
+              {
+                "enum": [
+                  400
+                ],
+                "type": "number"
+              },
+              {
+                "enum": [
+                  500
+                ],
+                "type": "number"
+              }
+            ]
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "details": {
+                "type": "object",
+                "required": [],
+                "properties": {}
+              }
+            }
+          }
+        }
+      },
+      "StatusResponse<54, 55>": {
+        "type": "object",
+        "required": [
+          "status",
+          "result"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              401
+            ],
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "required": [
+              "error"
+            ],
+            "properties": {
+              "error": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

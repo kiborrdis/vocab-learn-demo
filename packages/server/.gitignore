@@ -1,0 +1,6 @@
+# Environment variables
+.env
+prisma/dev.db
+prisma/dev*
+dist
+src/generated

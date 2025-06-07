@@ -1,0 +1,52 @@
+/* SwipeSlider CSS Module */
+.swipeContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swipeSlide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.animate {
+  transition: transform 0.5s ease-in-out;
+}
+
+.nextContentLeft,
+.nextContentRight,
+.currentContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.nextContentLeft {
+  left: -200%;
+}
+
+.nextContentRight {
+  left: 200%;
+}
+
+.currentContent + .greenBackground + .nextContent {
+  left: 200%;
+}
+.transitionBlockLeft,
+.transitionBlockRight {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.transitionBlockLeft {
+  left: 100%;
+}
+
+.transitionBlockRight {
+  left: -100%;
+}

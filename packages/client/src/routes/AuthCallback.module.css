@@ -1,0 +1,112 @@
+.callbackContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-color);
+  padding: 20px;
+}
+
+.callbackCard {
+  background: var(--card-background-color);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  padding: 48px 32px;
+  text-align: center;
+}
+
+.loading,
+.success,
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border-top: 4px solid var(--accent-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.successIcon,
+.errorIcon {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.loading h2,
+.success h2,
+.error h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.loading p,
+.success p,
+.error p {
+  font-size: 16px;
+  color: var(--subtle-text-color);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.retryButton {
+  background: var(--accent-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+  margin-top: 8px;
+}
+
+.retryButton:hover {
+  transform: translateY(-2px);
+  background: var(--accent-color-hover);
+  box-shadow: 0 4px 12px rgba(255, 230, 161, 0.3);
+}
+
+.retryButton:active {
+  transform: translateY(0);
+  background: var(--accent-color-active);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .callbackContainer {
+    padding: 16px;
+  }
+
+  .callbackCard {
+    padding: 32px 24px;
+  }
+
+  .loading h2,
+  .success h2,
+  .error h2 {
+    font-size: 20px;
+  }
+}

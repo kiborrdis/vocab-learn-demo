@@ -1,0 +1,28 @@
+.theme {
+  --background-color: #2c2c2c;
+  --accent-color: #ffe6a1;
+  --default-action-color: #323232;
+
+  --text-color: #ffffff;
+  --accent-text-color: #ffffff;
+  --default-action-text-color: #ffffff;
+
+  --subtle-text-color: #e0e0e0;
+  --accent-color-hover: #ffd966;
+  --accent-color-active: #ffcc33;
+
+  --default-action-color-hover: #323232;
+  --default-action-color-active: #323232;
+
+  --success-color: #4caf50;
+  --error-color: #f44336;
+  --appbar-color: #1a1a1a; /* App bar color */
+  --bottomsheet-background-color: #252525;
+
+  /* Additional theme variables for forms and cards */
+  --card-background-color: #3a3a3a;
+  --input-background-color: #404040;
+  --muted-background-color: #333333;
+  --command-background-color: #1e1e1e;
+  --command-text-color: var(--accent-color);
+}

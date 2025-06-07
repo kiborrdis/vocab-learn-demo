@@ -1,0 +1,69 @@
+.indexContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.wordCountContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.wordCount {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.wordCountLabel {
+  font-size: 1.2rem;
+  color: var(--subtle-text-color);
+}
+
+.startTrainingButton {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.startTrainingButton:hover {
+  background-color: var(--accent-color-hover);
+}
+
+.startTrainingButton:active {
+  background-color: var(--accent-color-active);
+}
+
+.startTrainingButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.errorContainer {
+  text-align: center;
+  color: var(--text-color);
+}
+
+.errorContainer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ef4444;
+}
+
+.errorContainer p {
+  font-size: 1rem;
+  color: var(--subtle-text-color);
+  margin: 0;
+}
